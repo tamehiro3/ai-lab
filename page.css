@@ -1,0 +1,39 @@
+/* ai-lab のサブページ共通スタイル(index.html の配色に合わせる) */
+:root{
+  --bg:#0f1420; --panel:#171e2e; --text:#e8ecf4; --muted:#9aa7bd;
+  --accent:#4da3ff; --accent2:#7ee0a3; --border:#2a3550;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f6f8fb; --panel:#ffffff; --text:#1a2233; --muted:#5a6780; --border:#dde4ef; }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);line-height:1.9;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+header.page{padding:28px 0 20px;border-bottom:1px solid var(--border)}
+header.page a.back{color:var(--accent);text-decoration:none;font-size:14px}
+header.page h1{font-size:clamp(22px,5vw,30px);margin-top:10px;line-height:1.4}
+
+main{padding:28px 0 10px}
+main .lead{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);
+  border-radius:0 12px 12px 0;padding:14px 16px;font-size:15px;margin-bottom:26px;color:var(--muted)}
+main h2{font-size:19px;margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+main h3{font-size:16px;margin:22px 0 6px}
+main p{margin-bottom:14px;font-size:15px}
+main ul,main ol{margin:0 0 16px 1.3em}
+main li{margin-bottom:7px;font-size:15px}
+main a{color:var(--accent)}
+
+table.tbl{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:14px}
+table.tbl th,table.tbl td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
+table.tbl th{background:var(--panel);white-space:nowrap}
+
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#06c755,#04a94a);color:#fff;
+  font-weight:700;font-size:16px;border-radius:14px;padding:16px;margin:24px 0 8px;text-decoration:none}
+
+footer{padding:30px 0 60px;margin-top:30px;border-top:1px solid var(--border);text-align:center}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:12px}
+footer nav a{color:var(--muted);font-size:13px;text-decoration:none}
+footer p{color:var(--muted);font-size:12px;line-height:1.7}
+.updated{font-size:13px;color:var(--muted);margin-top:26px}
